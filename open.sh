@@ -1,2 +1,2 @@
-jail -m jid=$JID command=/bin/bash
+jail -m name=$1 command=/bin/bash
 
