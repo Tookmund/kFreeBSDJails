@@ -2,7 +2,7 @@
 # newjail $NAME $IP
 
 # Where configuration script is stored
-source /srv/jail/scripts/conf.sh
+. /srv/jail/scripts/conf.sh
 
 NAME=$1
 IP=$2
@@ -26,10 +26,10 @@ then
 		exit 0
 	fi
 fi
-source $LOC/mk.jail
+. $LOC/mk.jail
 mkjail
 
-source $LOC/genscripts.jail
+. $LOC/genscripts.jail
 genrun
 
 echo "Done!"
