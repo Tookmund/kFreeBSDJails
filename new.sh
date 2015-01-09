@@ -1,21 +1,12 @@
 #!/bin/sh
 # ./new.sh $NAME $IP
 
-# Network interface for the Jail to use
-IF=xl0
-# Domain name
-DN="local.tld"
-
+# Where configuration script is stored
+CONF=/srv/jail/scripts/conf.sh
+source $CONF
 NAME=$1
-MIRROR="http://http.debian.net/debian"
 IP=$2
 HOSTNAME=$NAME.$DN
-
-if [ $NAME = $(basename $(dirname `pwd`)) ]
-then
-	echo "jail cannot have the same name as script folder: $NAME"
-	exit 0
-fi
 
 if [ -e /srv/jail/$NAME ]
 then
@@ -35,24 +26,11 @@ then
 		exit 0
 	fi
 fi
-debootstrap \
- --exclude=devd,dmidecode,isc-dhcp-client,isc-dhcp-common,kldutils,pf,vidcontrol \
- wheezy /srv/jail/$NAME "$MIRROR"
+source $LOC/mkjail.sh
+mkjail
 
-echo "$HOSTNAME" > /srv/jail/$NAME/etc/hostname
-echo "$IP $HOSTNAME" >> /srv/jail/$NAME/etc/hosts
-
-echo "Generating run script..."
-
-echo "#!/bin/sh" > /tmp/jail.$NAME
-echo "ifconfig $IF add $IP" >> /tmp/jail.$NAME
-echo "NAME=$NAME" >> /tmp/jail.$NAME
-echo "IP=$IP" >> /tmp/jail.$NAME
-echo "HOSTNAME=$HOSTNAME" >> /tmp/jail.$NAME
-
-cat run.sh >> /tmp/jail.$NAME
-
-cat /tmp/jail.$NAME > run.$NAME.sh
-chmod +x run.$NAME.sh
+source $LOC/genscripts.sh
+genrun
 
 echo "Done!"
+
