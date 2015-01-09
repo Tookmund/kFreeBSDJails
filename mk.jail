@@ -1,5 +1,3 @@
-#!/bin/sh
-# mkjail.sh $NAME
 # Generate basic jail folder
 mkjail () {
 	debootstrap \

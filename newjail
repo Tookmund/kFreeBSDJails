@@ -1,9 +1,9 @@
 #!/bin/sh
-# ./new.sh $NAME $IP
+# newjail $NAME $IP
 
 # Where configuration script is stored
-CONF=/srv/jail/scripts/conf.sh
-source $CONF
+source /srv/jail/scripts/conf.sh
+
 NAME=$1
 IP=$2
 HOSTNAME=$NAME.$DN
@@ -26,10 +26,10 @@ then
 		exit 0
 	fi
 fi
-source $LOC/mkjail.sh
+source $LOC/mk.jail
 mkjail
 
-source $LOC/genscripts.sh
+source $LOC/genscripts.jail
 genrun
 
 echo "Done!"
