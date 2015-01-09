@@ -1,0 +1,26 @@
+Debian Jails
+============
+A set of scripts to manage jails in Debian GNU/kFreeBSD
+
+Install
+=======
+Edit conf.sh to your liking then run
+    ./install.sh
+as root
+
+Then place conf.sh where you see fit and change newjail.sh to reflect that
+
+Usage
+=====
+    rule4.sh
+Add ruleset 4 to devfs (run on boot before running any jails)
+
+    newjail $NAME $IP
+Create a new jail with $NAME and assigned $IP and runscript $NAME
+
+	$RLOC/$NAME
+Run jail $NAME
+
+	jail -r $NAME
+Stop jail and kill all of its processes
+

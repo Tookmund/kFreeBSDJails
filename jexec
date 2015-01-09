@@ -1,2 +1,0 @@
-jail -m name=$1 command=$2
-
