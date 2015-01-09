@@ -1,0 +1,15 @@
+#!/bin/sh
+# Delete a jail and its runscript
+# deljail $NAME
+
+# Where conf.sh is located
+. /srv/jail/scripts/conf.jail
+
+NAME=$1
+
+if [ !(-e $LOC/$NAME) ]
+then
+	echo "Jail $NAME does not exist. Not deleting it."
+fi
+
+if [  ]

@@ -8,7 +8,8 @@ Edit conf.sh to your liking then run
     ./install.sh
 as root
 
-Then place conf.sh where you see fit and change newjail.sh to reflect that
+Then place conf.jail where you see fit and change newjail and deljail to
+reflect that
 
 Usage
 =====
