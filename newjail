@@ -26,10 +26,10 @@ then
 		exit 0
 	fi
 fi
-. $LOC/mk.jail
+. $LOC/mk.jail.sh
 mkjail
 
-. $LOC/genscripts.jail
+. $LOC/genscripts.jail.sh
 genrun
 
 echo "Done!"

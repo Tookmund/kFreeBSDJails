@@ -11,7 +11,7 @@ genrun () {
 
 	cat $LOC/run.sh >> /tmp/jail.$NAME
 
-	cat /tmp/jail.$NAME > $RLOC/$NAME
-	chmod +x $RLOC/$NAME
+	cat /tmp/jail.$NAME > $RLOC/$NAME.jail
+	chmod +x $RLOC/$NAME.jail
 }
 
