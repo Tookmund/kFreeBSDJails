@@ -1,10 +1,10 @@
 # Configuration parameters
 
 # Location of scripts
-LOC=/srv/jail/scripts
+LOC=/usr/sbin
 
 # Location of runscripts (can be the same place)
-RLOC=/srv/jail/scripts
+RLOC=$HOME/run.jail.d
 
 # Location of jail roots (each jail will get its own root directory under this
 JAILS=/srv/jail

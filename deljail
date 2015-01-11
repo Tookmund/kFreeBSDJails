@@ -3,7 +3,7 @@
 # deljail $NAME
 
 # Where conf.sh is located
-. /srv/jail/scripts/conf.jail
+. /etc/conf.jail
 
 NAME=$1
 

@@ -2,7 +2,7 @@
 # newjail $NAME $IP
 
 # Where configuration script is stored
-. /srv/jail/scripts/conf.sh
+. /etc/conf.jail
 
 NAME=$1
 IP=$2
