@@ -4,7 +4,7 @@
 CONF=/etc
 
 # Location of scripts
-LOC=/usr/sbin
+LOC=/usr/local/sbin
 
 # Location of runscripts (can be the same place)
 RLOC=$HOME/run.jail.d
