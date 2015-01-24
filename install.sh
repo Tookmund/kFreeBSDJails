@@ -13,7 +13,7 @@ mkdir -p $CONF
 cp ./conf.jail $CONF
 echo "Be  sure to change newjail and deljail to load conf.jail from $CONF/conf.jail"
 
-SCRIPTS=(genscripts.jail.sh mk.jail.sh rule4.sh run.sh)
+SCRIPTS="genscripts.jail.sh mk.jail.sh rule4.sh run.sh"
 install -m 700 -g root -o root -t $LOC $SCRIPTS
 
 # Create directories for runscripts and jails
