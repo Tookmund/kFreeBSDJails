@@ -11,7 +11,16 @@ fi
 # Install conf.jail
 mkdir -p $CONF
 cp ./conf.jail $CONF
-echo "Be  sure to change newjail and deljail to load conf.jail from $CONF/conf.jail"
+
+echo #!/bin/bash > newjail
+echo -n '. ' >> newjail
+echo $CONF >> newjail
+cat newjail.sh >> newjail
+
+echo #!/bin/bash > deljail
+echo -n '. ' >> deljail
+echo $CONF >> deljail
+cat deljail.sh >> deljail
 
 SCRIPTS="genscripts.jail.sh mk.jail.sh rule4.sh run.sh newjail deljail"
 install -m 700 -g root -o root -t $LOC $SCRIPTS

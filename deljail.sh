@@ -1,4 +1,3 @@
-#!/bin/sh
 # Delete a jail and its runscript
 # deljail $NAME
 

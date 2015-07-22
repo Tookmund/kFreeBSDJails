@@ -1,4 +1,3 @@
-#!/bin/sh
 # newjail $NAME $IP
 
 # Where configuration script is stored

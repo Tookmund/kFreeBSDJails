@@ -12,9 +12,6 @@ Edit conf.sh to your liking then run
     ./install.sh
 as root
 
-Then place conf.jail where you see fit and change newjail and deljail to
-reflect that
-
 Usage
 =====
     rule4.sh
