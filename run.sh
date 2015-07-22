@@ -7,7 +7,7 @@ mount -t tmpfs tmpfs /srv/jail/$NAME/run
 
 # A read-only /dev filesystem with restricted set of devices
 mount -t devfs devfs /srv/jail/$NAME/dev
-# :XXX: ruleset 4 must be initialised as explained earlier in this Wiki page
+# :XXX: ruleset 4 must be initialised
 devfs -m /srv/jail/$NAME/dev rule -s 4 applyset
 # Ensure the jail has some essential devices
 for DEVICE in null random urandom zero
@@ -29,7 +29,6 @@ done
 # Compatibility symlink from /dev/shm to /run/shm
 ln -s /run/shm /srv/jail/$NAME/dev/
 
-# :XXX: this IP address *must* be assigned to o
 mkdir -p /var/run/jail
 jail -J /var/run/jail/$NAME.jid -c \
   name=$NAME \
