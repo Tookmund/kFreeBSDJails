@@ -7,7 +7,7 @@ CONF=/etc
 LOC=/usr/local/sbin
 
 # Location of runscripts (can be the same place)
-RLOC=$HOME/run.jail.d
+RLOC=/usr/local/sbin
 
 # Location of jail roots (each jail will get its own root directory under this
 JAILS=/srv/jail
