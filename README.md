@@ -15,7 +15,7 @@ Edit conf.sh to your liking then run
 Usage
 =====
     rule4.sh
-Add ruleset 4 to devfs (run on boot before running any jails)
+Add ruleset 4 to devfs (run before running any jails)
 
     newjail $NAME $IP
 Create a new jail with $NAME and assigned $IP and runscript $NAME
