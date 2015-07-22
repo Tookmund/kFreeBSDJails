@@ -2,6 +2,10 @@ Debian Jails
 ============
 A set of scripts to manage jails in Debian GNU/kFreeBSD
 
+Mostly based on the Debian kFreeBSD/GNU wiki page about jails
+
+https://wiki.debian.org/Debian_GNU/kFreeBSD/Jails
+
 Install
 =======
 Edit conf.sh to your liking then run
