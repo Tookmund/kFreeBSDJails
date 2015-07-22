@@ -2,12 +2,7 @@
 # Install scripts to their install locations, as configured by conf.sh
 
 . ./conf.jail
-#check for root and if not exit
-if [ ! `id -u` = 0 ]
-then
-	echo "Install must be done as root"
-	exit 0
-fi
+
 # Install conf.jail
 cp ./conf.jail $CONF
 
