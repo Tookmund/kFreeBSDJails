@@ -10,7 +10,6 @@ Install
 =======
 Edit conf.sh to your liking then run
     ./install.sh
-as root
 
 Usage
 =====
