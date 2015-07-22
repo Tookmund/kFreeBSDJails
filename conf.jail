@@ -1,7 +1,7 @@
 # Configuration parameters
 
 # Location of conf.jail (only used by install and uninstall)
-CONF=/etc/conf.jail
+CONF=/usr/local/etc/conf.jail
 
 # Location of scripts
 LOC=/usr/local/sbin
