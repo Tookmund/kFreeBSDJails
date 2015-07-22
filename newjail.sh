@@ -1,8 +1,5 @@
 # newjail $NAME $IP
 
-# Where configuration script is stored
-. /etc/conf.jail
-
 NAME=$1
 IP=$2
 HOSTNAME=$NAME.$DN

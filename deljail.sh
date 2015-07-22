@@ -1,9 +1,6 @@
 # Delete a jail and its runscript
 # deljail $NAME
 
-# Where conf.sh is located
-. /etc/conf.jail
-
 NAME=$1
 
 echo "Killing Jail $NAME"
