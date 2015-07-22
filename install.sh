@@ -9,7 +9,6 @@ then
 	exit 0
 fi
 # Install conf.jail
-mkdir -p $CONF
 cp ./conf.jail $CONF
 
 echo #!/bin/bash > newjail
