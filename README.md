@@ -20,12 +20,15 @@ Add ruleset 4 to devfs (run before running any jails)
     newjail $NAME $IP
 Create a new jail with $NAME and assigned $IP and runscript $NAME
 
+    basejail $BASE $NAME $IP
+Create a jail $NAME with ip $IP based on jail $BASE
+
+    $RLOC/$NAME
+Run jail $NAME
+
     deljail $NAME
 Delete jail $NAME
 
-	$RLOC/$NAME
-Run jail $NAME
-
-	jail -r $NAME
+    jail -r $NAME
 Stop jail and kill all of its processes
 
