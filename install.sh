@@ -7,6 +7,7 @@
 cp ./conf.jail $CONF
 
 setupscript () {
+	echo "Setting up $1"
 	echo #!/bin/bash > $1
 	echo -n '. ' >> $1
 	echo $CONF >> $1
@@ -16,7 +17,7 @@ setupscript () {
 setupscript newjail
 setupscript deljail
 setupscript basejail
-SCRIPTS="genscripts.jail.sh mk.jail.sh rule4.sh run.sh newjail deljail"
+SCRIPTS="genscripts.jail.sh mk.jail.sh rule4.sh run.sh newjail deljail basejail"
 install -m 700 -g root -o root -t $LOC $SCRIPTS
 
 # Create directories for runscripts and jails
