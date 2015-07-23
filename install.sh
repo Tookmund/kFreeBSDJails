@@ -8,6 +8,7 @@ cp ./jail.config $CONF
 
 setupscript () {
 	echo "Setting up $1"
+	rm -f $1
 	echo #!/bin/bash > $1
 	echo -n '. ' >> $1
 	echo $CONF >> $1
