@@ -4,7 +4,7 @@
 . ./jail.config
 
 # Install conf.jail
-cp ./conf.jail $CONF
+cp ./jail.config $CONF
 
 setupscript () {
 	echo "Setting up $1"
