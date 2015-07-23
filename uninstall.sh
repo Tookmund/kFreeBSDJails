@@ -1,12 +1,5 @@
 #!/bin/sh
-. ./conf.jail
-
-# Check for root and if not exit
-if [ ! `id -u` = 0 ]
-then
-	echo "Uninstall must be done as root"
-	exit 0
-fi
+. ./jail.config
 
 SCRIPTS="genscripts.jail.sh mk.jail.sh rule4.sh run.sh newjail deljail"
 for i in $SCRIPTS

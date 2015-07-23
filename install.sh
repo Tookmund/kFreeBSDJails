@@ -1,7 +1,7 @@
 #!/bin/sh
 # Install scripts to their install locations, as configured by conf.sh
 
-. ./conf.jail
+. ./jail.config
 
 # Install conf.jail
 cp ./conf.jail $CONF
