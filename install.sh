@@ -6,16 +6,16 @@
 # Install conf.jail
 cp ./conf.jail $CONF
 
-echo #!/bin/bash > newjail
-echo -n '. ' >> newjail
-echo $CONF >> newjail
-cat newjail.sh >> newjail
+setupscript () {
+	echo #!/bin/bash > $1
+	echo -n '. ' >> $1
+	echo $CONF >> $1
+	cat $1.sh >> $1
+}
 
-echo #!/bin/bash > deljail
-echo -n '. ' >> deljail
-echo $CONF >> deljail
-cat deljail.sh >> deljail
-
+setupscript newjail
+setupscript deljail
+setupscript basejail
 SCRIPTS="genscripts.jail.sh mk.jail.sh rule4.sh run.sh newjail deljail"
 install -m 700 -g root -o root -t $LOC $SCRIPTS
 
