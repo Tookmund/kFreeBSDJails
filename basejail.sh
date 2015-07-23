@@ -1,4 +1,4 @@
-# newjail $BASE $NAME $IP
+# basejail $BASE $NAME $IP
 BASE=$1
 NAME=$2
 IP=$3
