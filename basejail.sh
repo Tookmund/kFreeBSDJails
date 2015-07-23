@@ -23,7 +23,7 @@ then
 	fi
 fi
 
-cp -rvf $LOC/$BASE $LOC/$NAME
+cp -rvf $JAILS/$BASE $JAILS/$NAME
 
 . $LOC/genscripts.jail.sh
 genrun
