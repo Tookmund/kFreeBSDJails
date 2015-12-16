@@ -1,5 +1,5 @@
 #!/bin/sh
-# Install scripts to their install locations, as configured by conf.sh
+# Install scripts to their install locations, as configured by jail.config
 
 . ./jail.config
 
