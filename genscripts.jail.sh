@@ -4,7 +4,7 @@ genrun () {
 	echo "Generating run script..."
 
 	echo "#!/bin/sh" > /tmp/jail.$NAME
-	echo ". $CONF jail.config"
+	echo ". $CONF"
 	echo "ifconfig $IF add $IP" >> /tmp/jail.$NAME
 	echo "NAME=$NAME" >> /tmp/jail.$NAME
 	echo "IP=$IP" >> /tmp/jail.$NAME
