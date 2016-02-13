@@ -14,7 +14,7 @@ else
 	rm -rfv /${JAILS}/${NAME} || echo "Deleting Jail ${NAME} failed: $?"
 fi
 
-if [ ! -e /${RLOC}/${NAME} ]
+if [ ! -e /${RLOC}/${NAME}.jail ]
 then
 	echo "Runscript for Jail ${NAME} does not exist. Not deleting it."
 else
