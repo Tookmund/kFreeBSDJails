@@ -1,5 +1,5 @@
 #!/bin/sh
-while read RULE ; do devfs rule -s 4 add $RULE ; done <<EOF
+while read RULE ; do devfs rule -s 4 add ${RULE} ; done <<EOF
 hide
 path log unhide
 path null unhide
